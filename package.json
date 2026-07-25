@@ -1,0 +1,16 @@
+{
+  "name": "vetvision-ai",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "frontend:dev": "pnpm --dir frontend dev",
+    "frontend:build": "pnpm --dir frontend build",
+    "frontend:lint": "pnpm --dir frontend lint",
+    "frontend:typecheck": "pnpm --dir frontend typecheck"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

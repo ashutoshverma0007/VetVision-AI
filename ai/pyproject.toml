@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vetvision-ai-workspace"
+version = "0.1.0"
+description = "AI workspace scaffold for VetVision AI."
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.5.0",
+  "opencv-python>=4.10.0",
+  "ultralytics>=8.3.0",
+  "xgboost>=2.1.0",
+  "shap>=0.46.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
