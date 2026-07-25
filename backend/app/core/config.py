@@ -18,12 +18,12 @@ class Settings(BaseSettings):
     supabase_anon_key: str = Field(default="", alias="SUPABASE_ANON_KEY")
     supabase_service_role_key: str = Field(default="", alias="SUPABASE_SERVICE_ROLE_KEY")
 
-        @field_validator("backend_cors_origins", mode="before")
-        @classmethod
-        def parse_backend_cors_origins(cls, value: str | list[str]) -> list[str]:
-            if isinstance(value, str):
-                    return [item.strip() for item in value.split(",") if item.strip()]
-            return value
+    @field_validator("backend_cors_origins", mode="before")
+    @classmethod
+    def parse_backend_cors_origins(cls, value: str | list[str]) -> list[str]:
+        if isinstance(value, str):
+            return [item.strip() for item in value.split(",") if item.strip()]
+        return value
 
 
 @lru_cache
